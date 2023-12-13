@@ -1,11 +1,13 @@
 import { useLocation } from "react-router-dom";
 
 const SideNav = () => {
+
   const side_links = [
     ["Home", "/"],
     ["About", "/about"],
     ["Portfolio", "/portfolio"],
   ];
+
   const variable = useLocation();
   let active = -1;
   side_links.map((item, index) => {
@@ -15,7 +17,7 @@ const SideNav = () => {
   });
   return (
     <>
-      <div className="  font-bold text-xl flex flex-col w-[150px]">
+      <div className="  font-bold text-xl flex flex-col w-[200px]">
         <ul className="text-right ">
           {side_links.map((row, index) => {
             let data = "false";
@@ -42,6 +44,7 @@ const SideNav = () => {
               </li>
             );
           })}
+          
         </ul>
       </div>
     </>

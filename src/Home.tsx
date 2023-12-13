@@ -1,5 +1,12 @@
 import "@/App.css";
 import dayjs from "dayjs";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/src/components/ui/hover-card";
+import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
+import Toolset from "./components/Toolset";
 
 enum Greeting {
   Ketidaktetapan = "Kiamat?",
@@ -32,18 +39,37 @@ function Home() {
           Selamat {greeting_used}
         </h1>
         <img
-          className="rounded-[400px] w-20 m-auto"
+          className="rounded-[400px] w-25 m-auto mb-5"
           src="https://avatars.githubusercontent.com/u/19950498?v=4"
           alt=""
         />
-        <p className="text-xl font-bold">
-          Greetings, I am Muniif, a computer science undergrad attending
+        <span className="text-xl font-bold">
+          Greetings, I am Muniif, a Computer Science undergrad attending
           <span className=" bg-clip-text text-transparent bg-gradient-to-b from-red-800 to-red-600">
             {" "}
-            UPM
+            <HoverCard>
+              <HoverCardTrigger>UPM</HoverCardTrigger>
+              <HoverCardContent>
+                <span className="flex justify-between space-x-4">
+                  <Avatar>
+                    <AvatarImage
+                      className="w-20 pointer-events-none"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-v1t0MjuiCTYqIXJKcbOe_wuayXFLYv6D5ixpdqhFg&s"
+                    />
+                    <AvatarFallback>UPM</AvatarFallback>
+                  </Avatar>
+                  <span className="space-y-1">
+                    <span className="text-sm">Universiti Putra Malaysia</span>
+                  </span>
+                </span>
+              </HoverCardContent>
+            </HoverCard>
           </span>
           .
-        </p>
+        </span>
+      </div>
+      <div>
+        <Toolset />
       </div>
     </>
   );

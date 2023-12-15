@@ -1,12 +1,8 @@
 import { useLocation } from "react-router-dom";
-
+import navList from '@/navbar_routes'
 const SideNav = () => {
 
-  const side_links = [
-    ["Home", "/"],
-    ["About", "/about"],
-    ["Portfolio", "/portfolio"],
-  ];
+  const side_links = navList;
 
   const variable = useLocation();
   let active = -1;

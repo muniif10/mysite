@@ -1,5 +1,6 @@
 import "@/App.css";
 import dayjs from "dayjs";
+import me from "@/assets/me.jpg"
 import {
   HoverCard,
   HoverCardContent,
@@ -39,8 +40,8 @@ function Home() {
           Selamat {greeting_used}
         </h1>
         <img
-          className="rounded-[400px] w-25 m-auto mb-5"
-          src="https://avatars.githubusercontent.com/u/19950498?v=4"
+          className=" shadow-sm rounded-full w-[15vh] m-auto mb-5"
+          src={me}
           alt=""
         />
         <span className="text-xl font-bold">

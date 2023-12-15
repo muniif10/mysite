@@ -26,10 +26,10 @@ const Toolset = () => {
           return (
             <div
               key={index}
-              className="transition-all saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
+              className="transition-all text-gray-600 hover:text-black saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
             >
               <img className="h-[70px]  m-auto" src={item[1]} alt="" />
-              <p className="font-extrabold">{item[0]}</p>
+              <p className="  font-extrabold">{item[0]}</p>
             </div>
           );
         })}

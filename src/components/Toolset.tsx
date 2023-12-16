@@ -28,7 +28,7 @@ const Toolset = () => {
               key={index}
               className="transition-all text-gray-600 hover:text-black saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
             >
-              <img className="h-[70px]  m-auto" src={item[1]} alt="" />
+              <img className="sm:h-[3em] h-[5em] m-auto object-contain" src={item[1]} alt="" />
               <p className="  font-extrabold">{item[0]}</p>
             </div>
           );

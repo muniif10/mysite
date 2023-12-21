@@ -40,6 +40,14 @@ const About: React.FC = () => {
             school children.
           </p>
         </div>
+        <div className={text_style}>
+          <p className={title_style}>
+            AWS Cloud Practioner Certificate (2022-2025)
+          </p>
+          <p>
+           I took a free programme held by Trainocate Malaysia and organized Malaysian Ministry of Higher Education.
+          </p>
+        </div>
       </div>
     </>
   );

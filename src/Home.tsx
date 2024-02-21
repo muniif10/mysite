@@ -61,6 +61,8 @@ function Home() {
               // This is broken, malas nak try useState walau mudah.
               if (!currentAudio || currentAudio.paused || currentAudio.ended) {
                 currentAudio = new Audio(amogus);
+                currentAudio.preservesPitch =true;
+                currentAudio.playbackRate = Math.random()*2;
                 currentAudio.play();
               } else {
               }

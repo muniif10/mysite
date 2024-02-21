@@ -1,6 +1,7 @@
 import "@/App.css";
 import dayjs from "dayjs";
-import me from "@/assets/me.jpg"
+import me from "@/assets/me.jpg";
+import amogus from "@/assets/amogus.mp3";
 import {
   HoverCard,
   HoverCardContent,
@@ -8,15 +9,20 @@ import {
 } from "@/src/components/ui/hover-card";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 import Toolset from "./components/Toolset";
+import { useRef, useState } from "react";
 
 enum Greeting {
   Ketidaktetapan = "Kiamat?",
+  AwalPagi = "Awal Pagi!",
   Pagi = "Pagi!",
   Tengahari = "Tengahari!",
   Petang = "Petang.",
 }
 
 function Home() {
+  let currentAudio : HTMLAudioElement;
+  const clickRef = useRef(0);
+  const [oooMagic, setMagic] = useState([""]);
   const jam = dayjs().hour();
   let greeting_used = Greeting.Ketidaktetapan;
   if (jam > 12) {
@@ -29,8 +35,13 @@ function Home() {
       greeting_used = Greeting.Petang;
     }
   } else {
-    // Kes pagi
-    greeting_used = Greeting.Pagi;
+    if (jam < 5) {
+      // awal naw
+      greeting_used = Greeting.AwalPagi;
+    } else {
+      // Kes pagi
+      greeting_used = Greeting.Pagi;
+    }
   }
 
   return (
@@ -39,9 +50,32 @@ function Home() {
         <h1 className="my-2 py-2 text-transparent bg-clip-text bg-gradient-to-br   from-orange-200 to-orange-500 font-extrabold text-5xl ">
           Selamat {greeting_used}
         </h1>
+        
         <img
-          className=" shadow-sm rounded-full w-[15vh] m-auto mb-5"
-          src={me}
+          onClick={() => {
+            
+            if (clickRef.current < 5) {
+              clickRef.current = clickRef.current + 1;
+              console.log("Clue?: " + clickRef.current);
+            } else {
+              // This is broken, malas nak try useState walau mudah.
+              if (!currentAudio || currentAudio.paused || currentAudio.ended) {
+                currentAudio = new Audio(amogus);
+                currentAudio.play();
+              } else {
+              }
+
+              setMagic([
+                " w-[50vh] rounded-none",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Medjed_%28Deity%29.png/800px-Medjed_%28Deity%29.png",
+              ]);
+            }
+          }}
+          className={
+            " shadow-sm rounded-full w-[15vh] m-auto mb-5 transform-gpu transition-all" +
+            oooMagic[0]
+          }
+          src={oooMagic[0].length > 1 ? oooMagic[1] : me}
           alt=""
         />
         <span className="text-xl font-bold">

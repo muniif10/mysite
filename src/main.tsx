@@ -6,7 +6,7 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import About from "./pages/About.tsx";
+import About from "./pages/about/About.tsx";
 import ErrorPage from "./pages/errors/error_page.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import Layout from "./Layout.tsx";
@@ -48,34 +48,6 @@ const router = createBrowserRouter([
     ),
   },
 ]);
-
-// function ClerkProviderWithRoutes() {
-//   const navigate = useNavigate();
-
-//   return (
-//     <ClerkProvider publishableKey={clerkPubKey} navigate={(to) => navigate(to)}>
-//       <Routes>
-//         <Route
-//           path="/"
-//           element={
-//             <Layout>
-//               <Home />
-//             </Layout>
-//           }
-//           errorElement={<ErrorPage />}
-//         />
-//         <Route
-//           path="/about"
-//           element={
-//             <Layout>
-//               <About/>
-//             </Layout>
-//           }
-//         />
-//       </Routes>
-//     </ClerkProvider>
-//   );
-// }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

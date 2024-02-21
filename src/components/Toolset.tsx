@@ -22,14 +22,14 @@ const Toolset = () => {
     <div className=" border-[2px] rounded-lg shadow-md p-5">
       <p className="text-3xl font-extrabold text-center">My Toolset</p>
       <div className="pt-3 flex flex-wrap flex-1 flex-row gap-5 justify-between place-content-center m-5">
-        {tools.map((item, index) => {
+        {tools.map((tool_used, index) => {
           return (
             <div
               key={index}
-              className="transition-all text-gray-600 hover:text-black saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
+              className="transition-all text-gray-400 hover:text-gray-900 saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
             >
-              <img className="sm:h-[3em] h-[5em] m-auto object-contain" src={item[1]} alt="" />
-              <p className="  font-extrabold">{item[0]}</p>
+              <img className="sm:h-[3em] h-[5em] m-auto object-contain" src={tool_used[1]} alt="" />
+              <p className="  font-extrabold">{tool_used[0]}</p>
             </div>
           );
         })}

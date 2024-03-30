@@ -47,7 +47,7 @@ function Home() {
   return (
     <>
       <div className="text-center">
-        <h1 className="my-2 py-2 text-transparent bg-clip-text bg-gradient-to-br   from-orange-200 to-orange-500 font-extrabold text-5xl ">
+        <h1 className="mt-4 text-center font-extrabold text-3xl capitalize my-2 py-2 text-transparent bg-clip-text bg-gradient-to-br from-orange-200 to-orange-500 ">
           Selamat {greeting_used}
         </h1>
         

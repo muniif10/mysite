@@ -3,13 +3,13 @@ import Status from "./enums";
 const about_achievemnts = [
   {
     title: "Final Year Project",
-    text: "TBD",
+    text: "In discussion with supervisor, Dr Siti Nurulain",
     status: Status.ONGOING
   },
   {
     title: "Hilti Hackthon",
-    text: "I am joining with friends to gather more experience and grow the network.",
-    status: Status.ONGOING
+    text: "I am joining with friends to gather more experience and grow the network. We did not get through the halfway mark.",
+    status: Status.FINISHED
   },
   {
     title: "2023 APAC HPC-AI Cometition - Merit Award",

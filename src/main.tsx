@@ -47,6 +47,7 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

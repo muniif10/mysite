@@ -16,9 +16,9 @@ const About: React.FC = () => {
         I am Muniif and this is about what I did.
       </p>
 
-      <div className="  text-lg gap-5 flex flex-col m-5 p-2">
+      <div className="  text-lg gap-5 flex flex-col  p-2">
         {about_achievemnts.map((achievement, index) => (
-          <div key={index} className={text_style}>
+          <div key={index} className={`border-gray-200 border-2 `+text_style}>
             <div className="flex flex-row pb-1 justify-between">
               <p className={title_style}>
                 {achievement.title && achievement.title.length > 1

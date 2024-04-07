@@ -2,6 +2,7 @@ import "@/App.css";
 import dayjs from "dayjs";
 import me from "@/assets/me.jpg";
 import amogus from "@/assets/amogus.mp3";
+import Typewriter from 'typewriter-effect';
 import {
   HoverCard,
   HoverCardContent,
@@ -20,7 +21,7 @@ enum Greeting {
 }
 
 function Home() {
-  let currentAudio : HTMLAudioElement;
+  let currentAudio: HTMLAudioElement;
   const clickRef = useRef(0);
   const [oooMagic, setMagic] = useState([""]);
   const jam = dayjs().hour();
@@ -43,17 +44,23 @@ function Home() {
       greeting_used = Greeting.Pagi;
     }
   }
+  
+  let full_greeting = "Selamat " + greeting_used;
 
+ 
   return (
     <>
       <div className="text-center">
-        <h1 className="mt-4 text-center font-extrabold text-3xl capitalize my-2 py-2 text-transparent bg-clip-text bg-gradient-to-br from-orange-200 to-orange-500 ">
-          Selamat {greeting_used}
+        <h1 id="typewriter" className="mt-4 text-center font-extrabold text-3xl capitalize my-2 py-2 text-transparent bg-clip-text bg-gradient-to-br from-orange-200 to-orange-500 ">
+          <Typewriter options={{
+            strings: ["Hi!", full_greeting, "Greetings!"],
+            autoStart: true,
+            loop: true,
+          }}/>
         </h1>
-        
+
         <img
           onClick={() => {
-            
             if (clickRef.current < 5) {
               clickRef.current = clickRef.current + 1;
               console.log("Clue?: " + clickRef.current);
@@ -61,8 +68,8 @@ function Home() {
               // This is broken, malas nak try useState walau mudah.
               if (!currentAudio || currentAudio.paused || currentAudio.ended) {
                 currentAudio = new Audio(amogus);
-                currentAudio.preservesPitch =true;
-                currentAudio.playbackRate = Math.random()*2;
+                currentAudio.preservesPitch = true;
+                currentAudio.playbackRate = Math.random() * 2;
                 currentAudio.play();
               } else {
               }

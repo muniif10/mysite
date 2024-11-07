@@ -54,6 +54,8 @@
 .*
 ~*
 
+bun.lockb
+
 # ignore node/grunt dependency directories
 node_modules/
 

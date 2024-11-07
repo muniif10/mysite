@@ -11,14 +11,6 @@ import ErrorPage from "./pages/errors/error_page.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import Layout from "./Layout.tsx";
 
-// Whenever I have time for auth
-// import { ClerkProvider } from "@clerk/clerk-react";
-
-// if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
-//   throw new Error("Missing Publishable Key");
-// }
-// const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
 
 
 const router = createBrowserRouter([

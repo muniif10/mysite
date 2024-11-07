@@ -45,7 +45,7 @@ function Home() {
     }
   }
   
-  let full_greeting = "Selamat " + greeting_used;
+  const full_greeting = "Selamat " + greeting_used;
 
  
   return (
@@ -71,8 +71,7 @@ function Home() {
                 currentAudio.preservesPitch = true;
                 currentAudio.playbackRate = Math.random() * 2;
                 currentAudio.play();
-              } else {
-              }
+              } else { /* empty */ }
 
               setMagic([
                 " w-[50vh] rounded-none",

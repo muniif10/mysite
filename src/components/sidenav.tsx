@@ -23,8 +23,7 @@ const SideNav = () => {
             return (
               <li
                 onClick={() => {
-                  // @ts-ignore: No problem, surely will haunt me later
-                  window.location = row[1];
+                  window.location.href = row[1]
                 }}
                 className="delay-75 transition-all  cursor-pointer pr-5 py-2  transform data-[active=true]:-skew-y-3 data-[active=true]:bg-gradient-to-br hover:data-[active=true]:skew-y-3"
                 data-active={data}

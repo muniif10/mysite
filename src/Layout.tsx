@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import SideNav from "./components/sidenav";
 import navLinks from "@/navbar_routes";
 import { useLocation } from "react-router-dom";
@@ -8,8 +8,30 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   const [navAppear, setNavAppear] = useState(false);
+  // const [isLoaded, setLoaded] = useState(false);
+  // useEffect(() => {
+  //   const today = new Date().toISOString().split('T')[0]; // Get today's date in "YYYY-MM-DD" format
+  //   const lastVisit = localStorage.getItem('lastVisitDate');
+   
+  //   if (lastVisit !== today) {
+  //     // First visit today, so show the overlay
+  //     setLoaded(true);
+  //     // Store today's date in localStorage
+  //     localStorage.setItem('lastVisitDate', today);
+  //   }
+
+  //   // Hide the overlay once the page has loaded
+  //   const handleLoad = () => setLoaded(false);
+  //   window.addEventListener("load", handleLoad);
+
+  //   return () => {
+  //     window.removeEventListener("load", handleLoad);
+  //   }
+  // }, []);
   return (
     <>
+      {/* <div className={isLoaded ? "bg-white fixed top-0 left-0 w-[100vw] h-[100vh] object-cover flex justify-center z-50 transition-all duration-100  " : "fixed top-0 left-0 w-[100vw] h-[100vh] object-cover flex justify-center z-50 transition-all duration-1000"}/> */}
+    
       <div className="bg-zinc-100 min-h-screen flex flex-col items-center">
         <div className="flex flex-1 flex-row justify-end sm:m-20 m-0 ">
           <div className="hidden sm:block">

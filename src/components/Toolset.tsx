@@ -16,19 +16,37 @@ const Toolset = () => {
       "Figma",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png",
     ],
+    [
+      "Flutter",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/1920px-Google-flutter-logo.svg.png"
+    ],
+    [
+      "bloc",
+      "https://raw.githubusercontent.com/felangel/bloc/master/assets/logos/bloc.png"
+    ],
+    [
+      "TensorFlow",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/TensorFlow_logo.svg/1920px-TensorFlow_logo.svg.png"
+    ],
+    [
+      "Python",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png"
+    ],
+
+
   ];
 
   return (
-    <div className=" border-[2px] rounded-lg shadow-md p-5">
+    <div className="m-auto border-[2px] rounded-lg shadow-md p-5">
       <p className="text-3xl font-extrabold text-center">My Toolset</p>
-      <div className="pt-3 flex flex-wrap flex-1 flex-row gap-5 justify-between place-content-center m-5">
+      <div className="pt-3 flex flex-wrap flex-1 flex-row gap-5  place-content-center m-5">
         {tools.map((tool_used, index) => {
           return (
             <div
               key={index}
-              className="transition-all text-gray-400 hover:text-gray-900 saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
+              className="min-w-[8em] max-w-[10em] transition-all text-gray-400 hover:text-gray-900 saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
             >
-              <img className="sm:h-[3em] h-[5em] m-auto object-contain" src={tool_used[1]} alt="" />
+              <img className="sm:h-[3em] h-[5em] m-auto object-contain w-[5em]" src={tool_used[1]} alt="" />
               <p className="  font-extrabold">{tool_used[0]}</p>
             </div>
           );

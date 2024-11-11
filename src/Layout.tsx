@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import SideNav from "./components/sidenav";
 import navLinks from "@/navbar_routes";
 import { useLocation } from "react-router-dom";

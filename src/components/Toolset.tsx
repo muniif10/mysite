@@ -34,6 +34,11 @@ const Toolset = () => {
     ],
 
 
+    ["Jest",
+      "",
+      "🃏"
+    ],
+    ["C", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/800px-The_C_Programming_Language_logo.svg.png"]
   ];
 
   return (
@@ -46,7 +51,11 @@ const Toolset = () => {
               key={index}
               className="min-w-[8em] max-w-[10em] transition-all text-gray-400 hover:text-gray-900 saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
             >
-              <img className="sm:h-[3em] h-[5em] m-auto object-contain w-[5em]" src={tool_used[1]} alt="" />
+              {tool_used[1] !== "" ?
+                <img className="sm:h-[3em] h-[5em] m-auto object-contain w-[5em]" src={tool_used[1]} alt="" />
+                :
+                <p className="  m-auto object-contain text-5xl text-center" >{tool_used[2]}</p>
+              }
               <p className="  font-extrabold">{tool_used[0]}</p>
             </div>
           );

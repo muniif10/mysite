@@ -80,14 +80,14 @@ function Home() {
             }
           }}
           className={
-            " shadow-sm rounded-full w-[15vh] m-auto mb-5 transform-gpu transition-all" +
+            " shadow-sm rounded-full w-[20vh] sm:w-[15vh] m-auto mb-5 transform-gpu transition-all" +
             oooMagic[0]
           }
           src={oooMagic[0].length > 1 ? oooMagic[1] : me}
           alt=""
         />
         <span className="text-xl font-bold">
-          Greetings, I am Muniif, a Computer Science undergrad attending
+          I am Muniif, a Computer Science undergrad attending
           <span className=" bg-clip-text text-transparent bg-gradient-to-b from-red-800 to-red-600">
             {" "}
             <HoverCard>

@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import About from "./pages/about/About.tsx";
 import ErrorPage from "./pages/errors/error_page.tsx";
-import Portfolio from "./pages/Portfolio.tsx";
+import Portfolio from "./pages/portfolio/Portfolio.tsx";
 import Layout from "./Layout.tsx";
 
 

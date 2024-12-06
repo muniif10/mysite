@@ -42,7 +42,7 @@ const Toolset = () => {
   ];
 
   return (
-    <div className="m-auto border-[2px] rounded-lg shadow-md p-5">
+    <div className="bg-white m-auto border-[2px] rounded-lg shadow-md p-5">
       <p className="text-3xl font-extrabold text-center">My Toolset</p>
       <div className="pt-3 flex flex-wrap flex-1 flex-row gap-5  place-content-center m-5">
         {tools.map((tool_used, index) => {
@@ -52,7 +52,7 @@ const Toolset = () => {
               className="min-w-[8em] max-w-[10em] transition-all text-gray-400 hover:text-gray-900 saturate-0 hover:saturate-100 flex flex-1 flex-col gap-5 text-center"
             >
               {tool_used[1] !== "" ?
-                <img className="sm:h-[3em] h-[5em] m-auto object-contain w-[5em]" src={tool_used[1]} alt="" />
+                <img className="sm:h-[3em] h-[1em] m-auto object-contain w-[5em]" src={tool_used[1]} alt="" />
                 :
                 <p className="  m-auto object-contain text-5xl text-center" >{tool_used[2]}</p>
               }

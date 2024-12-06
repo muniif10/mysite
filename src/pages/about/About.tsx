@@ -16,9 +16,9 @@ const About: React.FC = () => {
         My life events.
       </p>
 
-      <div className="  text-lg gap-5 flex flex-col  p-2">
+      <div className=" text-lg gap-5 flex flex-col  p-2">
         {about_achievements.map((achievement, index) => (
-          <div key={index} className={`border-gray-200 border-2 ` + text_style}>
+          <div key={index} className={`border-gray-200 border-2 bg-white ` + text_style}>
             <div className="flex flex-row pb-1 justify-between">
               <div className="flex flex-row">
                 <p className={title_style}>
@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 <span className={status_finished}>FINISHED</span>
               )}
             </div>
-            <p>
+            <p className="text-gray-500 text-sm text-justify ">
               {achievement.text && achievement.text.length > 1
                 ? achievement.text
                 : "Forgout about the text?"}

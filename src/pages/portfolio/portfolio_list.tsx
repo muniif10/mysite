@@ -1,9 +1,11 @@
 type PortfolioItem = {
     title: string;
-    image: string | null;
+    image: string[] | null;
     description: string;
     date: string;
 }
+
+// Image hosted on server must be given relative path to the project
 
 const portfolios: PortfolioItem[] =
     [
@@ -18,12 +20,12 @@ const portfolios: PortfolioItem[] =
             title: "Unit Testing with Jester",
             date: "November 2024",
             description: "Implemented unit testing for a simple todo API server for correctness and consistency. Understood the basic concept of testing and coverage.",
-            image: null
+            image:[ "/src/assets/jest.jpg"]
         },
         {
             title: "Food Delivery Application for Mamak Restaurant",
             date: "June 2024",
-            image: null,
+            image: ["src/assets/app_home.jpeg","src/assets/sidebar.jpeg","src/assets/past_orders.jpeg","src/assets/firebase.jpeg"],
             description: "Developed a Flutter mobile application for Android platform for food delivery. It implements user registration, menu browsing, order placement with use of Google's Firebase for backend and Provider for state-management within the app. User's history is saved within Firestore for recording purpose.",
 
         },
@@ -37,7 +39,7 @@ const portfolios: PortfolioItem[] =
         {
             title: "Customer Relation Management System Web Application",
             date: "June 2022",
-            image: "https://github.com/muniif10/database_crm/raw/master/images/UI1.png?raw=true",
+            image: ["https://github.com/muniif10/database_crm/raw/master/images/UI1.png?raw=true"],
             description: "Designed a simple CRUD application to manage customer interaction with business and it incorporates MySQL as the database and Spring Boot together with Thymeleaf to produce the front-end. MySQL was containerized to avoid conflicting with other installations and managing with ease in separate container.",
 
         },

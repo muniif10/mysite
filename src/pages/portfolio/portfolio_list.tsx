@@ -1,3 +1,8 @@
+import jest from "@/assets/jest.jpg"
+import past_order from "@/assets/past_orders.jpeg"
+import firebase from "@/assets/firebase.jpeg"
+import app_home from "@/assets/app_home.jpeg"
+import sidebar from "@/assets/sidebar.jpeg"
 type PortfolioItem = {
     title: string;
     image: string[] | null;
@@ -20,12 +25,12 @@ const portfolios: PortfolioItem[] =
             title: "Unit Testing with Jester",
             date: "November 2024",
             description: "Implemented unit testing for a simple todo API server for correctness and consistency. Understood the basic concept of testing and coverage.",
-            image:[ "/src/assets/jest.jpg"]
+            image: [jest]
         },
         {
             title: "Food Delivery Application for Mamak Restaurant",
             date: "June 2024",
-            image: ["src/assets/app_home.jpeg","src/assets/sidebar.jpeg","src/assets/past_orders.jpeg","src/assets/firebase.jpeg"],
+            image: [app_home, sidebar, past_order, firebase],
             description: "Developed a Flutter mobile application for Android platform for food delivery. It implements user registration, menu browsing, order placement with use of Google's Firebase for backend and Provider for state-management within the app. User's history is saved within Firestore for recording purpose.",
 
         },

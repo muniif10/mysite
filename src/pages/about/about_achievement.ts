@@ -1,10 +1,11 @@
-import Status from "./enums";
+import { Status, ImageType } from "./enums";
 
 type Achievement = {
   title: string;
   image: string | null;
   text: string;
   status: Status | null;
+  imageType?: ImageType;
 };
 
 const about_achievements: Achievement[] = [
@@ -12,8 +13,8 @@ const about_achievements: Achievement[] = [
     title: "Internship at Texas Instruments Malaysia",
     status: Status.FINISHED,
     text: "Reduced NVA task of Planning dept., implemented the reporting for quality to improve their visibility on unaddressed action plan, involved in Lights Out roadmap project with Building Destination System, involved with Foundation/ESH week event on media committee and handling the booth.",
-    image: null,
-
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/ba/TexasInstruments-Logo.svg",
+    imageType: ImageType.LINK,
   },
   {
     title: "Curtin Malaysia CTF 2024",

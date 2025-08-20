@@ -1,5 +1,5 @@
 import about_achievements from "./about_achievement";
-import Status from "./enums";
+import { Status } from "./enums";
 const About: React.FC = () => {
   const title_style = "font-bold text-black inline";
   const text_style = "shadow-lg p-3 rounded-lg text-gray-800";
@@ -19,16 +19,16 @@ const About: React.FC = () => {
       <div className=" text-lg gap-5 flex flex-col  p-2">
         {about_achievements.map((achievement, index) => (
           <div key={index} className={`border-gray-200 border-2 bg-white ` + text_style}>
+
             <div className="flex flex-row pb-1 justify-between">
               <div className="flex flex-row">
                 <p className={title_style}>
                   {achievement.title && achievement.title.length > 1
                     ? achievement.title
                     : "Forgot about the title?"}
-
+                  {/* TODO: Need to do something about handling SVG, image URL, and etc  */}
                 </p>
-                {achievement.image != null ? (<img className="rounded-sm pl-1 max-w-[5vw] max-h-[5vh] object-contain" src={achievement.image} />) : (<></>)}
-
+                {achievement.image != null ? (<img className="rounded-sm pl-1 max-w-[10vw] max-h-[10vh] object-contain" src={achievement.image} />) : (<></>)}
               </div>
 
               {achievement.status != null ? (

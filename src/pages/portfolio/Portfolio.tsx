@@ -14,7 +14,8 @@ const Portfolio = () => {
             return <div key={portfolio.title}>
               <div className="border-gray-200 border-[0.5px] shadow-sm rounded-sm bg-white p-5 mb-2">
                 <div className="flex-row flex place-content-between">
-                  <p className="font-bold">{portfolio.title}</p>
+                  {/* <p className="font-bold">{portfolio.title}</p> */}
+                  {portfolio.url != null ? <a className="text-blue-700 underline underline-offset-4" target="_blank" href={portfolio.url}><p className="font-bold">{portfolio.title}<span className="text-xs" > (click to github) </span></p></a> : <p className="font-bold">{portfolio.title}</p>}
                   <p className=" text-gray-500 text-sm">{portfolio.date}</p>
                 </div>
                 <div>
@@ -22,37 +23,37 @@ const Portfolio = () => {
                   {/* {portfolio.image !== null ? <img className="rounded-sm shadow-sm my-5 object-fill" src={portfolio.image} /> : <></>} */}
                   {/* {portfolio.image?.length > 1? :  } */}
                   <div className="py-5">
-                  <Carousel opts={{ align: "start", loop: true }}>
-                    <CarouselContent>
-                      {portfolio.image !== null ? (
-                        Array.isArray(portfolio.image) && portfolio.image.length > 1 ? (
-                          portfolio.image.map((image, index) => (
-                            <CarouselItem  key={index}> {/* Key should be here on CarouselItem */}
+                    <Carousel opts={{ align: "start", loop: true }}>
+                      <CarouselContent>
+                        {portfolio.image !== null ? (
+                          Array.isArray(portfolio.image) && portfolio.image.length > 1 ? (
+                            portfolio.image.map((image, index) => (
+                              <CarouselItem key={index}> {/* Key should be here on CarouselItem */}
+                                <img
+                                  className="rounded-sm shadow-sm object-cover max-w-full max-h-[400px] m-auto"
+                                  src={image}
+                                  alt={`Portfolio image ${index}`}
+                                  style={{ objectFit: "cover" }} // Ensures the image covers the area while maintaining aspect ratio
+                                />
+                              </CarouselItem>
+                            ))
+                          ) : (
+                            <CarouselItem key={0}>
                               <img
                                 className="rounded-sm shadow-sm object-cover max-w-full max-h-[400px] m-auto"
-                                src={image}
-                                alt={`Portfolio image ${index}`}
-                                style={{ objectFit: "cover" }} // Ensures the image covers the area while maintaining aspect ratio
+                                src={portfolio.image[0]}
+                                alt="Portfolio image"
+                                style={{ objectFit: "cover" }}
                               />
                             </CarouselItem>
-                          ))
-                        ) : (
-                          <CarouselItem key={0}>
-                            <img
-                              className="rounded-sm shadow-sm object-cover max-w-full max-h-[400px] m-auto"
-                              src={portfolio.image[0]}
-                              alt="Portfolio image"
-                              style={{ objectFit: "cover" }}
-                            />
-                          </CarouselItem>
-                        )
-                      ) : null}
-                    </CarouselContent>
-                  </Carousel>
+                          )
+                        ) : null}
+                      </CarouselContent>
+                    </Carousel>
                   </div>
 
                 </div>
-                
+
                 <p className="text-gray-500 text-sm text-justify">{portfolio.description}</p>
               </div>
             </div>

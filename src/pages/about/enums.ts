@@ -1,6 +1,12 @@
-enum Status {
+export enum Status {
     ONGOING,
     FINISHED,
-  }
+    TO_START,
+}
 
-export default Status;
+export enum ImageType {
+    SVG,
+    LINK,
+    RAW_IMAGE,
+}
+

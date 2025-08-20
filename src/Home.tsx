@@ -10,7 +10,7 @@ import {
 } from "@/src/components/ui/hover-card";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 import Toolset from "./components/Toolset";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 enum Greeting {
   Ketidaktetapan = "Kiamat?",
@@ -22,7 +22,7 @@ enum Greeting {
 
 function Home() {
   let currentAudio: HTMLAudioElement;
-  const clickRef = useRef(0);
+  // const clickRef = useRef(0);
   const [oooMagic, setMagic] = useState([""]);
   const jam = dayjs().hour();
   let greeting_used = Greeting.Ketidaktetapan;
@@ -44,10 +44,10 @@ function Home() {
       greeting_used = Greeting.Pagi;
     }
   }
-  
+
   const full_greeting = "Selamat " + greeting_used;
 
- 
+
   return (
     <>
       <div className="text-center">
@@ -56,28 +56,28 @@ function Home() {
             strings: ["Hi!", full_greeting, "Greetings!"],
             autoStart: true,
             loop: true,
-          }}/>
+          }} />
         </h1>
 
         <img
-          onClick={() => {
-            if (clickRef.current < 5) {
-              clickRef.current = clickRef.current + 1;
-              console.log("Clue?: " + clickRef.current);
-            } else {
-              // This is broken, malas nak try useState walau mudah.
-              if (!currentAudio || currentAudio.paused || currentAudio.ended) {
-                currentAudio = new Audio(amogus);
-                currentAudio.preservesPitch = true;
-                currentAudio.playbackRate = Math.random() * 2;
-                currentAudio.play();
-              } else { /* empty */ }
+          onContextMenu={() => {
+            // if (clickRef.current < 5) {
+            //   clickRef.current = clickRef.current + 1;
+            //   console.log("Clue?: " + clickRef.current);
+            // } else {
+            // This is broken, malas nak try useState walau mudah.
+            if (!currentAudio || currentAudio.paused || currentAudio.ended) {
+              currentAudio = new Audio(amogus);
+              currentAudio.preservesPitch = true;
+              currentAudio.playbackRate = Math.random() * 2;
+              currentAudio.play();
+            } else { /* empty */ }
 
-              setMagic([
-                " w-[50vh] rounded-none",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Medjed_%28Deity%29.png/800px-Medjed_%28Deity%29.png",
-              ]);
-            }
+            setMagic([
+              " w-[50vh] rounded-none",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Medjed_%28Deity%29.png/800px-Medjed_%28Deity%29.png",
+            ]);
+            // }
           }}
           className={
             " shadow-sm rounded-full w-[20vh] sm:w-[15vh] m-auto mb-5 transform-gpu transition-all" +

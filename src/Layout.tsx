@@ -22,7 +22,7 @@ const Layout: React.FC<Props> = ({ children }) => {
               <SideNav />
             </div>
 
-            <div className="z-20 w-[60vw] sm:w-[50vw] m-2 flex-1 basis-10/12 gap-5 px-6 flex flex-col">
+            <div className="z-20 w-[80vw] sm:w-[50vw] m-2 flex-1 basis-10/12 gap-5 px-6 flex flex-col">
               {children}
             </div>
           </div>

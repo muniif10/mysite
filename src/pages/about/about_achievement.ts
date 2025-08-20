@@ -9,34 +9,33 @@ type Achievement = {
 
 const about_achievements: Achievement[] = [
   {
+    title: "Internship at Texas Instruments Malaysia",
+    status: Status.FINISHED,
+    text: "Reduced NVA task of Planning dept., implemented the reporting for quality to improve their visibility on unaddressed action plan, involved in Lights Out roadmap project with Building Destination System, involved with Foundation/ESH week event on media committee and handling the booth.",
+    image: null,
+
+  },
+  {
     title: "Curtin Malaysia CTF 2024",
-    image:
-      "https://curtin.edu.my/wp-content/themes/mimas/dist/images/cm-logo.png",
+    image: null,
     text: "Challenging myself to see how fun CTF can be, joined with friends. I gained a lot of experience in term of OSINT and Linux-based challenges.",
     status: Status.FINISHED,
   },
   {
     title: "Final Year Project",
-    text: "Calorie Tracker with Image Recognition under supervision of Dr. Nurulain",
-    status: Status.ONGOING,
-    image: null,
-  },
-  {
-    title: "Hilti Hackthon",
-    image:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMT89Ojo6Iys/REU9TDRFNT0BCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzg3Nzc3Nzc2MS83Nys0NjcrKy02LTIuNzcvKzUtNzUrLf/AABEIABwAHAMBEQACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgIEAQcIAP/EACgQAAICAQMBCAMBAAAAAAAAAAECAwQFAAYRMSEiJUFRcXSyEhOhB//EABsBAAIDAQEBAAAAAAAAAAAAAAADAgQFBwYB/8QAJREAAQQBAwMFAQAAAAAAAAAAAQACAxEEBSExQWFxJDORscEG/9oADAMBAAIRAxEAPwBWpYnJZCNpKGPt2kU/izQQM4B9OwaztzwF06SeGI1I8A9yAqssbwyPFKjJIjFXRhwVI6gjyOhMBDgCDYKt0sTk8hEZaGOt2Y1b8S8EDOAfTkDr2jRueAlyZEMRqR4B7kBVJFeKRo5FZHUlWVhwQR1BGvlpopwsLb3+JnwTIfKH1GrONwV4/wDpPfZ4/UXubA2zbuT2bEUn7ppGkk4sEd4nk9nPqdSMEZNqnHrOaxgY07AVwjW3sHjsDTkrYpWWJ5DI3MhbvcAdfYDTGMawUFSy8ubKeHy8gUues6fHMj8qX7nWceSuhYp9OzwPpHNo72t7XqT1q1SCdZpP2EyEgg8ceXtprJCzhUtQ0pma8Pc4ihSXshZN/IWbkiBXsTPKyjoCxJ4/ulloJsrSijEUbYx0AHwmPaW+Le16EtOrTgmSSUylpCQQeAOOz20yOQxigFmahpMebIHucRQpLVyc27c9l1CtNI0hA6Ak86XS04mCNgYOgpQYBTwNSUio86EL2hCzoUSaX//Z",
-    text: "I am joining with friends to gather more experience and grow the network. We did not get through the halfway mark.",
+    text: "Calorie Tracker with Image Recognition under supervision of Dr. Nurulain. Exposed to mobile application development with AI model running on the edge.",
     status: Status.FINISHED,
+    image: null,
   },
   {
     title: "2023 APAC HPC-AI Competition - Merit Award",
     status: Status.FINISHED,
-    image: "https://www.hpcwire.com/wp-content/uploads/2020/11/HPC_AI_logo.jpg",
+    image: null,
     text: "This is where I learned the most about Linux in general including compiling and dealing with a supercomputer (GADI of NCI Australia).",
   },
   {
     title: "ASEAN Student Contest on Information Security (ASCIS)",
-    text: "My first time joining a CTF, it was not that great in term of my performance but it is my first exposure to one. I had learned a fewthings on general computer security skills.",
+    text: "My first time joining a CTF, it was not that great in term of my performance but it is my first exposure to one. I had learned a few things on general computer security skills.",
     image: null,
     status: null,
   },
@@ -47,7 +46,7 @@ const about_achievements: Achievement[] = [
     status: Status.FINISHED,
   },
   {
-    title: "AWS Cloud Practioner Certificate (2022-2025)",
+    title: "AWS Cloud Practioner Certificate (2023-2027)",
     text: "I took a free programme held by Trainocate Malaysia and organized Malaysian Ministry of Higher Education. The online exam was nerve-wracking but I now know the basics of cloud computing.",
     image: null,
     status: Status.FINISHED,

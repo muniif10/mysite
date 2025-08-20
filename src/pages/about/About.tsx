@@ -46,7 +46,7 @@ const About: React.FC = () => {
             <p className="text-gray-500 text-sm text-justify ">
               {achievement.text && achievement.text.length > 1
                 ? achievement.text
-                : "Forgout about the text?"}
+                : "Forgot about the text?"}
             </p>
           </div>
         ))}

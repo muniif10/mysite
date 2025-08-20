@@ -31,6 +31,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           <div
             onClick={() => {
               setNavAppear(!navAppear);
+              console.log("Pressed");
             }}
             className="z-30 backdrop-blur-sm cursor-pointer rounded-full p-4 bottom-3 right-3 fixed sm:hidden text-white focus:outline-none bg-gradient-to-br from-blue-100/80 to-blue-200/80 shadow-md"
           >
@@ -78,11 +79,11 @@ const Mobile_Nav = ({
     <>
       <div
         onClick={(e) => {
-          setNavState(false);
           e.stopPropagation();
+          setNavState(false);
         }}
         data-appear={appearState}
-        className=" transition-all data-[appear=true]:translate-x-[0em] data-[appear=false]:translate-x-[40em] sm:hidden fixed h-screen w-full bg-white backdrop-blur-sm"
+        className=" transition-all z-50 top-0 left-0 data-[appear=true]:translate-x-[0em] data-[appear=false]:translate-x-[40em]   fixed h-screen w-full bg-white backdrop-blur-sm"
       >
         <div className=" translate-y-[50vh] font-bold text-3xl flex flex-col">
           <ul className="text-center flex-col flex">

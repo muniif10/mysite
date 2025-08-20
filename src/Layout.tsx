@@ -83,7 +83,7 @@ const Mobile_Nav = ({
           setNavState(false);
         }}
         data-appear={appearState}
-        className=" transition-all z-50 top-0 left-0 data-[appear=true]:translate-x-[0em] data-[appear=false]:translate-x-[40em]   fixed h-screen w-full bg-white backdrop-blur-sm"
+        className=" transition-all z-50 data-[appear=true]:display data-[appear=false]:hidden top-0 left-0 data-[appear=true]:translate-x-[0em] data-[appear=false]:translate-x-[40em]   fixed h-screen w-full bg-white backdrop-blur-sm"
       >
         <div className=" translate-y-[50vh] font-bold text-3xl flex flex-col">
           <ul className="text-center flex-col flex">
